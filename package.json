@@ -1,0 +1,52 @@
+{
+  "name": "@yes20sh/ts-node-express",
+  "version": "1.0.8",
+  "description": "Zero-config TypeScript Express backend starter kit",
+  "main": "dist/server.js",
+  "bin": {
+    "ts-node-express": "scripts/postinstall.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "postinstall": "node scripts/postinstall.js",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint \"src/**/*.ts\""
+  },
+  "files": [
+    "dist",
+    "src",
+    "scripts",
+    "templates",
+    "tsconfig.json",
+    "README.md",
+    ".prettierrc"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "Yashraj Singh Solanki",
+  "license": "MIT",
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^22.10.2",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^9.11.1",
+    "morgan": "^1.12.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.2"
+  }
+}
